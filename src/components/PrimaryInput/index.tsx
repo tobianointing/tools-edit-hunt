@@ -11,7 +11,7 @@ type Props = {
 
 export default function PrimaryInput(props: Props) {
   return (
-    <div className={styles.InputWrapper}>
+    <div aria-label="input" data-testid="test-input"  className={styles.InputWrapper}>
       <label htmlFor="">{props.label}</label>
       <input type="text" />
       <small>

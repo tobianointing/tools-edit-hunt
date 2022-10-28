@@ -16,7 +16,7 @@ export default function EditToolForm(props: Props) {
       <div className={styles.header}>
         <h3>Edit Tool</h3>
         <div className={styles.btns}>
-          <PrimaryButton title={"Cancel"} clasName={"secondary"} onClick={props.handleFormCancel} />
+          <PrimaryButton title={"Cancel"} className={"secondary"} onClick={props.handleFormCancel} />
           <PrimaryButton title={"Publish Changes"} onClick={props.handleFormCancel}/>
         </div>
       </div>

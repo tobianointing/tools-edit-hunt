@@ -9,7 +9,7 @@ export interface CustomTooltipType {
 export default function CustomTooltip({ payload, label, active }: CustomTooltipType) {
   if (active) {
     return (
-      <div className={styles.customTooltip}>
+      <div data-testid="tooltip" className={styles.customTooltip}>
         <p className={styles.label}>{label}</p>
         <p className={styles.intro}>{payload && payload.length ? payload[0].value : ""}</p>
       </div>

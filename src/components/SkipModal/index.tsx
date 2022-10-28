@@ -13,7 +13,7 @@ export default function SkipModal(props: Props) {
     props.handleNextTask()
   }
   return (
-    <div className={styles.modalWrapper}>
+    <div data-testid="skip-modal" className={styles.modalWrapper}>
       <div className={styles.modal}>
         <h2 className={styles.title}>Hey There</h2>
         <p className={styles.desc}>We would love to know why you want to skip this tool</p>
@@ -35,7 +35,7 @@ export default function SkipModal(props: Props) {
           <div className={styles.btnWrapper}>
             <PrimaryButton
               title={"Cancel"}
-              clasName={"secondary"}
+              className={"secondary"}
               onClick={props.handleModalClose}
             />
             <PrimaryButton title={"Continue"} type={"submit"} />

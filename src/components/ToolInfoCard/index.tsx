@@ -9,7 +9,7 @@ type Props = {
 
 export default function ToolInfoCard(props: Props) {
   return (
-    <div className={styles.toolInfoCard}>
+    <div data-testid="tool-info-card" className={styles.toolInfoCard}>
       <h2 className={styles.title}>{props.task.name}</h2>
       <p className={styles.moreInfo}>
         This tool has {props.task.missingFields.length} missing fields. Please use the edit button

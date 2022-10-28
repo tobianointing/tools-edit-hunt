@@ -9,7 +9,7 @@ type Props = {
 
 export default function DashboardCard(props: Props) {
     return (
-      <div className={styles.card}>
+      <div data-testid="dashboard-card" className={styles.card}>
        
           <div className={styles.iconWrapper}>
             {props.icon}

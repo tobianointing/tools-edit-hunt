@@ -8,7 +8,7 @@ type Props = {
 
 export default function MissingFieldCard(props: Props) {
   return (
-    <div className={styles.missingField}>
+    <div  className={styles.missingField}>
       <span>{props.index}</span> {props.name}
     </div>
   )

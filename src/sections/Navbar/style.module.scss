@@ -36,6 +36,7 @@
     margin: 0 1em;
     border-radius: 4px;
     gap: 1.5em;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 
     a {
       color: var(--primary-text);
@@ -72,6 +73,7 @@
       padding: unset;
       margin: unset;
       background-color: unset;
+      box-shadow: unset;
 
       a {
         color: var(--secondary-text);

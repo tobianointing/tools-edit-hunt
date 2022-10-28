@@ -8,7 +8,7 @@ type Props = {
 
 export default function Avater(props: Props) {
   return (
-    <div className={styles.avater}>
+    <div data-testid="avater" className={styles.avater}>
       <Image src={props.image} />
     </div>
   )
