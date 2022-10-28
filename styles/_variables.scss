@@ -1,0 +1,20 @@
+:root {
+  #{--primary-color}: #527af0;
+  #{--primary-text}: #525252;
+  #{--secondary-text}: #ffffff;
+  #{--background-color}: #f2f1f6;
+  #{--primary-border-color}: #d4d4d4;
+  #{--custom-light-blue}: #bfcad8;
+  #{--blue-1}: #2e3852;
+  #{--blue-3}: #33468c;
+  #{--blue-4}: #33469c;
+  #{--blue-5}: #bfbfbf;
+  #{--blue-6}: #f2f1f6;
+  #{--card-background}: #ffffff;
+}
+
+[data-theme="dark"] {
+  #{--primary-color}: #262626;
+  #{--primary-text}: #ffffff;
+  #{--secondary-text}: #000000;
+}

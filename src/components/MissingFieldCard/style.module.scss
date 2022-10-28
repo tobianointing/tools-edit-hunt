@@ -1,0 +1,15 @@
+.missingField {
+  border: 1px solid var(--primary-border-color);
+  padding: 0.7em;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-size: 0.8rem;
+}
+
+@media (min-width: 1024px) {
+  .missingField {
+    font-size: .9rem;
+  }
+}

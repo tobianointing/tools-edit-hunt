@@ -1,0 +1,24 @@
+.chartWrapper {
+  border: 1px solid var(--primary-border-color);
+  border-radius: 0.8em;
+  width: 100%;
+  padding: 0 1em 0;
+}
+
+.chartHeader {
+  font-size: 0.6rem;
+  font-weight: 100;
+}
+
+.chartTitle {
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  margin: 0.5rem 0;
+  font-weight: 500;
+}
+
+@media (min-width: 1024px) {
+  .chartTitle {
+    font-size: 1.5rem;
+  }
+}

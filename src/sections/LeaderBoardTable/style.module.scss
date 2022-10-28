@@ -1,0 +1,92 @@
+
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+  
+    thead {
+      border-bottom: 1px solid #D4D4DD;
+      border-top: 1px solid #D4D4DD;
+      font-size: 0.8em;
+    }
+  
+    th {
+      padding: 0.5em;
+  
+      &:nth-child(2) {
+        display: none;
+      }
+    }
+  
+    tbody {
+      font-size: 0.75rem;
+    }
+  
+    tr {
+      border-bottom: 1px solid #D4D4DD;
+    }
+  
+    .userRow {
+      .avater {
+        display: none;
+      }
+    }
+  
+    td {
+      text-align: center;
+      padding: 1.5em;
+  
+      &:nth-child(2) {
+        display: none;
+      }
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .header {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin: 2em 0 1em;
+    }
+  
+    .badge {
+      padding: 0.4em 1em;
+    }
+  
+    .table {
+      thead {
+        font-size: 1rem;
+      }
+  
+      th {
+        padding: 1em;
+  
+        &:nth-child(2) {
+          display: table-cell;
+        }
+      }
+  
+      tbody {
+        font-size: 1rem;
+      }
+  
+  
+      .change {
+        div {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 0.5em;
+        }
+      }
+  
+      td {
+        padding: 1.5em;
+  
+        &:nth-child(2) {
+          display: table-cell;
+        }
+      }
+    }
+  }
+  

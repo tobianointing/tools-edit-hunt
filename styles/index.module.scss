@@ -1,0 +1,64 @@
+.header {
+  font-size: 2rem;
+  text-align: center;
+  margin: 2em 0 0.6em;
+  line-height: 2.4rem;
+}
+
+.desc {
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.toolWrapper {
+  margin: 2em 0;
+}
+
+.btnWrapper {
+  margin: 1em 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.tiny1,
+.tiny2,
+.tiny3 {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .header {
+    font-size: 2.1875rem;
+    text-align: center;
+    width: 50%;
+    margin: 3em auto 0.6em;
+  }
+
+  .desc {
+    font-size: 1rem;
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .toolWrapper {
+    width: 40%;
+    margin: 2em auto;
+  }
+
+  .tiny1 {
+    position: absolute;
+    top: 50%;
+  }
+
+  .tiny2 {
+    position: absolute;
+    right: 10%;
+  }
+
+  .tiny3 {
+    position: absolute;
+    right: 10%;
+    top: 85%;
+  }
+}

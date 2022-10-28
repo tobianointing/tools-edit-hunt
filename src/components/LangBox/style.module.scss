@@ -1,0 +1,21 @@
+.wrapper {
+  position: absolute;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--secondary-text);
+  color: var(--primary-text);
+  padding: 1em;
+  gap: 1em;
+  border-radius: 4px;
+  top: 60px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  z-index: 2;
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+  }
+
+}

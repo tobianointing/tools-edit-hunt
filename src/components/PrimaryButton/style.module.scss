@@ -1,0 +1,25 @@
+.primaryButton {
+  border: none;
+  outline: none;
+  background-color: var(--primary-color);
+  color: var(--secondary-text);
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.5em 1em;
+  border-radius: 4px;
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  cursor: pointer;
+}
+
+.secondary {
+  background-color: var(--blue-5);
+}
+
+@media (min-width: 1024px) {
+  .primaryButton {
+    font-size: 1rem;
+    padding: 1em 1.5em;
+  }
+}

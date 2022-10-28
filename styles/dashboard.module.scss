@@ -1,0 +1,31 @@
+.header {
+  margin-top: 2em;
+  font-size: 2rem;
+}
+
+.smallHeader {
+  margin-bottom: 2em;
+  font-size: 1.2rem;
+}
+
+.cardWrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, auto));
+  gap: 1em;
+}
+
+.chartSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin-top: 2.5em;
+}
+
+@media (min-width: 1024px) {
+  .chartSection {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    margin-top: 2.5em;
+  }
+}

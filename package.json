@@ -8,9 +8,11 @@
     "test:ci": "jest --ci"
   },
   "dependencies": {
+    "flagit": "^2.0.3",
     "next": "latest",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
+    "recharts": "^2.1.15",
     "sass": "^1.55.0"
   },
   "devDependencies": {

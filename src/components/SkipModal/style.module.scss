@@ -1,0 +1,68 @@
+.modalWrapper {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  display: grid;
+  place-content: center;
+  background: rgba($color: #000000, $alpha: 0.3);
+}
+
+.modal {
+  background-color: var(--card-background);
+  padding: 2em 1em 1em;
+  border-radius: 4px;
+  margin: 1em;
+
+  .title {
+    font-size: 1.1rem;
+    margin-bottom: 0.6em;
+  }
+
+  .desc {
+    font-size: 0.9rem;
+    margin-bottom: 2em;
+  }
+}
+
+.formWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+
+  .btnWrapper {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1.5em;
+    margin-top: 2em;
+  }
+}
+
+.fieldWrapper {
+  font-size: 0.8rem;
+  border-radius: 4px;
+  display: flex;
+  gap: 0.5em;
+  background-color: var(--blue-5);
+  padding: 1em;
+  color: var(--primary-text);
+}
+
+@media (min-width: 1024px) {
+  .modal {
+
+    .title {
+      font-size: 1.2rem;
+    }
+
+    .desc {
+      font-size: 1rem;
+    }
+  }
+
+  .fieldWrapper {
+    font-size: 1rem;
+  }
+}
