@@ -1,12 +1,13 @@
 # ToolHuntEdit
 
-ToolHuntEdit Public Link [ToolHuntEdit.ai](https://ToolHuntEdit.ai)
+ToolHuntEdit Public Link [ToolHuntEdit](https://tools-edit-hunt.vercel.app/)
 
 ## Table of Content:
 
 -   [About The App](#about-the-app)
 -   [Screenshots](#screenshots)
 -   [Technologies](#technologies)
+-   [Test](#test)
 -   [Setup](#setup)
 -   [Approach](#approach)
 -   [Status](#status)
@@ -20,6 +21,8 @@ Toolhub is a collection of tools utilized by numerous Wiki projects. The quantit
 
 
 ## Screenshots
+![Home](./public/home.png)
+![Dashboard](./public/dashboard.png)
 
 Web App V1
 
@@ -33,6 +36,18 @@ Other secondary technologies used on this project includes:
 -   `React Testing Library`
 -   `Prettier`
 -   `ESLint`
+
+
+## Test
+
+This project is covered with Unit tests written in `React Testing Library` and `Jest`.
+
+Run component tests
+
+```bash
+
+yarn test
+```
 
 ## Setup
 
