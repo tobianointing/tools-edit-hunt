@@ -16,6 +16,8 @@ import {
 } from "recharts"
 import CustomTooltip from "src/components/CustomTooltip/index"
 import PrimaryBarChart from "src/components/PrimaryBarChart/index"
+import IncompleteIcon from "src/components/Icons/IncompleteIcon"
+import EditedIcon from "src/components/Icons/EditedIcon"
 
 const data = [
   {
@@ -76,15 +78,15 @@ export default function Dashbaord() {
         <p className={styles.smallHeader}>Welcome Jane</p>
 
         <div className={styles.cardWrapper}>
-          <DashboardCard icon={<ToolBox />} title={"Total Tools"} value={"200"} />
-          <DashboardCard icon={<ToolBox />} title={"Total Tools"} value={"200"} />
-          <DashboardCard icon={<ToolBox />} title={"Total Tools"} value={"200"} />
-          <DashboardCard icon={<ToolBox />} title={"Total Tools"} value={"200"} />
+          <DashboardCard icon={<ToolBox />} title={"Total Tools"} value={"1200"} />
+          <DashboardCard icon={<IncompleteIcon />} title={"Total Tools With Missing Fields"} value={"600"} />
+          <DashboardCard icon={<ToolBox />} title={"Percentage of Missing Tools"} value={"50%"} />
+          <DashboardCard icon={<EditedIcon />} title={"Number of Tools Edited"} value={"800"} />
         </div>
 
         <div className={styles.chartSection}>
           <PrimaryBarChart title={"Most missing tools"} data={data} />
-          <PrimaryBarChart title={"Most missing tools"} data={data} />
+          <PrimaryBarChart title={"Most used technology"} data={data} />
         </div>
       </main>
     </div>

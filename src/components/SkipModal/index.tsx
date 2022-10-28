@@ -4,17 +4,19 @@ import styles from "./style.module.scss"
 
 type Props = {
   handleModalClose: () => void
+  handleNextTask: () => void
 }
 
 export default function SkipModal(props: Props) {
   const handleSubmit = (e: React.SyntheticEvent) => {
     e.preventDefault()
+    props.handleNextTask()
   }
   return (
     <div className={styles.modalWrapper}>
       <div className={styles.modal}>
         <h2 className={styles.title}>Hey There</h2>
-        <p className={styles.desc}>We would love to know why you want skip this tool</p>
+        <p className={styles.desc}>We would love to know why you want to skip this tool</p>
 
         <form className={styles.formWrapper} onSubmit={handleSubmit}>
           <div className={styles.fieldWrapper}>

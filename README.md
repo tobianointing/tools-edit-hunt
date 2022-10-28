@@ -1,29 +1,70 @@
-# Next.js + Jest
+# ToolHuntEdit
 
-This example shows how to configure Jest to work with Next.js.
+ToolHuntEdit Public Link [ToolHuntEdit.ai](https://ToolHuntEdit.ai)
 
-This includes Next.js' built-in support for Global CSS, CSS Modules and TypeScript.
+## Table of Content:
 
-## How to Use
+-   [About The App](#about-the-app)
+-   [Screenshots](#screenshots)
+-   [Technologies](#technologies)
+-   [Setup](#setup)
+-   [Approach](#approach)
+-   [Status](#status)
+-   [Credits](#credits)
 
-Quickly get started using [Create Next App](https://github.com/vercel/next.js/tree/canary/packages/create-next-app#readme)!
+## About The App
 
-In your terminal, run the following command:
+Toolhub is a collection of tools utilized by numerous Wiki projects. The quantity and caliber of the information it includes directly affects its usefulness as such. Many of the tools in Toolhub currently have missing or insufficient information.
+
+**ToolHuntEdit**  is a web application that is streamlined and gamified to make editing faster and more enjoyable on Toolhub.
+
+
+## Screenshots
+
+Web App V1
+
+## Technologies
+
+The frontend architecture use `Nextjs` as the JavaScript Framework written in `TypeScript` and Using `SCSS (Modular CSS)` for UI Styling.
+
+Other secondary technologies used on this project includes:
+
+-   `Jest`
+-   `React Testing Library`
+-   `Prettier`
+-   `ESLint`
+
+## Setup
+
+### Download or clone the repository
+
+### Install dependencies
 
 ```bash
-npx create-next-app --example with-jest with-jest-app
+
+yarn install
 ```
+
+### After, run the development server:
 
 ```bash
-yarn create next-app --example with-jest with-jest-app
+
+yarn dev
 ```
 
-```bash
-pnpm create next-app --example with-jest with-jest-app
-```
+Open [http://localhost:8080](http://localhost:8080) with your browser to see the result.
 
-## Run Jest Tests
+## Approach
 
-```bash
-npm test
-```
+Approach:
+
+## Status
+
+**ToolHuntEdit** development is still in progress. `Version 1` will be out soon.
+
+## Credits
+
+List of contriubutors:
+
+-   [Oluwatobi Adeyokunnu](https://tobianointing.github.io/)
+

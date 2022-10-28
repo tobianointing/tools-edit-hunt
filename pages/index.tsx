@@ -14,16 +14,39 @@ import { useState } from "react"
 import Footer from "src/sections/Footer/index"
 import ToolInfoCard from "src/components/ToolInfoCard/index"
 import EditToolForm from "src/sections/EditToolForm/index"
+import { TasksType } from "src/types/index"
+
+const taskQueue: TasksType[] = [
+  {
+    name: "pywikibot",
+    missingFields: [
+      "depracated",
+      "replaced_by",
+      "for_wiki",
+      "user_doc_url",
+      "experimental",
+      "wikidataqid",
+      "tooltype",
+      "ui_languages",
+    ],
+  },
+  {
+    name: "youtube",
+    missingFields: ["depracated", "replaced_by", "user_doc_url", "api_url_doc"],
+  },
+]
 
 export default function Home() {
   const [modalIsOpen, setModalIsOpen] = useState(false)
+  const [tasks, setTasks] = useState(taskQueue)
+  const [taskCount, setTaskCount] = useState(0)
 
   const [formStep, setFromStep] = useState(0)
 
   const missingFields = ["depracated", "replaced_by", "for_wiki", "user_doc_url", "experimental"]
 
   const handleFormNext = () => {
-    if (formStep < 2) {
+    if (formStep < 3) {
       setFromStep((prevState) => prevState + 1)
     }
   }
@@ -40,6 +63,14 @@ export default function Home() {
 
   const handleSkip = () => {
     setModalIsOpen(!modalIsOpen)
+  }
+
+  const handleNextTask = () => {
+    if (taskCount < tasks.length - 1) {
+      setTaskCount((prev) => prev + 1)
+    }
+
+    setModalIsOpen(false)
   }
 
   return (
@@ -74,10 +105,10 @@ export default function Home() {
         <div className={styles.toolWrapper}>
           {formStep === 0 && (
             <>
-              <ToolInfoCard missingFields={missingFields} />
+              <ToolInfoCard task={tasks[taskCount]} />
               <div className={styles.btnWrapper}>
-                <PrimaryButton icon={<Edit />} title="Edit Tool" onClick={handleFormNext} />
                 <PrimaryButton icon={<MemoSkipArrow />} title="Skip Tool" onClick={handleSkip} />
+                <PrimaryButton icon={<Edit />} title="Edit Tool" onClick={handleFormNext} />
               </div>
             </>
           )}
@@ -93,7 +124,12 @@ export default function Home() {
           )}
         </div>
 
-        {modalIsOpen && <SkipModal handleModalClose={() => setModalIsOpen(false)} />}
+        {modalIsOpen && (
+          <SkipModal
+            handleModalClose={() => setModalIsOpen(false)}
+            handleNextTask={handleNextTask}
+          />
+        )}
       </main>
       <Footer />
     </div>
