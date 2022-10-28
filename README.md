@@ -9,8 +9,6 @@ ToolHuntEdit Public Link [ToolHuntEdit](https://tools-edit-hunt.vercel.app/)
 -   [Technologies](#technologies)
 -   [Test](#test)
 -   [Setup](#setup)
--   [Approach](#approach)
--   [Status](#status)
 -   [Credits](#credits)
 
 ## About The App
@@ -69,13 +67,6 @@ yarn dev
 
 Open [http://localhost:8080](http://localhost:8080) with your browser to see the result.
 
-## Approach
-
-Approach:
-
-## Status
-
-**ToolHuntEdit** development is still in progress. `Version 1` will be out soon.
 
 ## Credits
 
