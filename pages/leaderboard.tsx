@@ -8,10 +8,6 @@ import LeaderboardTable from "src/sections/LeaderBoardTable/index"
 export default function Dashbaord() {
   return (
     <div className={styles.container}>
-      <Head>
-        <title>Tool Edit Hunt</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
 
       <Navbar />
       <main>

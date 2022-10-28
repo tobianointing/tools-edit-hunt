@@ -23,25 +23,25 @@ export default function EditToolForm(props: Props) {
       <form className={styles.form}>
         {props.formStep === 1 && (
           <section className={styles.formSection}>
-            <PrimaryInput label={"Deprecated"} message={"fill this form now"} />
-            <PrimaryInput label={"For wiki"} message={"fill this form now"} />
-            <PrimaryInput label={"Api url"} message={"fill this form now"} />
+            <PrimaryInput label={"Deprecated"} message={"please help fill this form"} />
+            <PrimaryInput label={"For wiki"} message={"please help fill this form"} />
+            <PrimaryInput label={"Api url"} message={"please help fill this form"} />
             
           </section>
         )}
 
         {props.formStep === 2 && (
           <section className={styles.formSection}>
-            <PrimaryInput label={"Replaced by"} message={"fill this form now"} />
-            <PrimaryInput label={"Experimental"} message={"fill this form now"} />
-            <PrimaryInput label={"User doc url"} message={"fill this form now"} />
+            <PrimaryInput label={"Replaced by"} message={"fplease help fill this form"} />
+            <PrimaryInput label={"Experimental"} message={"fplease help fill this form"} />
+            <PrimaryInput label={"User doc url"} message={"fplease help fill this form"} />
           </section>
         )}
 
         {props.formStep === 3 && (
           <section className={styles.formSection}>
-            <PrimaryInput label={"Available UI Languages"} message={"fill this form now"} />
-            <PrimaryInput label={"Wikidata QID"} message={"fill this form now"} />
+            <PrimaryInput label={"Available UI Languages"} message={"fplease help fill this form"} />
+            <PrimaryInput label={"Wikidata QID"} message={"fplease help fill this form"} />
           </section>
         )}
       </form>

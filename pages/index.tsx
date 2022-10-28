@@ -1,4 +1,3 @@
-import Head from "next/head"
 import Image from "next/image"
 
 import styles from "@/styles/index.module.scss"
@@ -75,11 +74,7 @@ export default function Home() {
 
   return (
     <div className={styles.container}>
-      <Head>
-        <title>Tool Edit Hunt</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
+     
       <Navbar />
 
       <main>
@@ -117,7 +112,7 @@ export default function Home() {
             <>
               <EditToolForm formStep={formStep} handleFormCancel={handleFormCancel} />
               <div className={styles.btnWrapper}>
-                <PrimaryButton icon={<Edit />} title="Go Back" onClick={handleFormPrev} />
+                <PrimaryButton title="Go Back" onClick={handleFormPrev} />
                 <PrimaryButton icon={<MemoSkipArrow />} title="Continue" onClick={handleFormNext} />
               </div>
             </>
