@@ -8,8 +8,8 @@ type Props = {
 
 export default function Avater(props: Props) {
   return (
-    <div data-testid="avater" className={styles.avater}>
-      <Image src={props.image} />
-    </div>
+    <span data-testid="avater" className={styles.avater}>
+      <Image src={props.image} height={40} width={40}/>
+    </span>
   )
 }

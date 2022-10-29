@@ -1,26 +1,39 @@
-import Avater from "../Avater/index";
-import ChangeUpArrow from "../Icons/ChangeDownArrow";
+import Avater from "../Avater/index"
+import ChangeUpArrow from "../Icons/ChangeDownArrow"
 import styles from "./style.module.scss"
-import avater from "public/avater.png"
 
-export default function TableRow() {
-    return (
-      <tr>
-        <td>1</td>
-        <td className={styles.change}>
-          <div>
-            <ChangeUpArrow /> 2
-          </div>
-        </td>
-        <td className={styles.userRow}>
-          <div className={styles.avater}>
-            <Avater image={avater} />
-          </div>
-          <div className="text">Busayor</div>
-        </td>
-        <td>23</td>
-        <td>9 Month ago</td>
-      </tr>
-    )
-  }
-  
+interface leaderboardType {
+  rank: number
+  avater: string
+  username: string
+  lasttimeedit: string
+  noofedits: number
+}
+
+type Props = {
+  data: leaderboardType
+  index: number
+}
+
+export default function TableRow(props: Props) {
+  const { avater, lasttimeedit, noofedits, rank, username } = props.data
+
+  return (
+    <tr itemID={`${props.index}`}>
+      <td>{rank}</td>
+      <td className={styles.change}>
+        <span>
+          <ChangeUpArrow /> 2
+        </span>
+      </td>
+      <td className={styles.userRow}>
+        <span className={styles.avater}>
+          <Avater image={avater} />
+        </span>
+        <span className="text">{username}</span>
+      </td>
+      <td>{noofedits}</td>
+      <td>{lasttimeedit}</td>
+    </tr>
+  )
+}

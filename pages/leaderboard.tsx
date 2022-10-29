@@ -4,11 +4,11 @@ import styles from "@/styles/leaderboard.module.scss"
 import Navbar from "src/sections/Navbar/index"
 import TableRow from "src/components/TableRow/index"
 import LeaderboardTable from "src/sections/LeaderBoardTable/index"
+import { leaderboard } from "src/data/index"
 
 export default function Dashbaord() {
   return (
     <div className={styles.container}>
-
       <Navbar />
       <main>
         <div className={styles.header}>
@@ -22,10 +22,9 @@ export default function Dashbaord() {
 
         <div>
           <LeaderboardTable>
-            <TableRow />
-            <TableRow />
-            <TableRow />
-            <TableRow />
+            {leaderboard.map((elem, index) => (
+              <TableRow key={index} index={index} data={elem} />
+            ))}
           </LeaderboardTable>
         </div>
       </main>

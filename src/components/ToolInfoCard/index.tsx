@@ -14,15 +14,14 @@ export default function ToolInfoCard(props: Props) {
       <p className={styles.moreInfo}>
         This tool has {props.task.missingFields.length} missing fields. Please use the edit button
         to fill in the missing fields.
-      </p>
-      <p className={styles.moreInfo}>
+      <br />
         Please click "Skip tool" to see the next tool if you are unable to locate any of the missing
         fields.
       </p>
 
       <div className={styles.missingFieldWrapper}>
         {props.task.missingFields.map((elem, index) => (
-          <MissingFieldCard name={elem} index={index + 1} />
+          <MissingFieldCard key={index} name={elem} index={index + 1} />
         ))}
       </div>
     </div>

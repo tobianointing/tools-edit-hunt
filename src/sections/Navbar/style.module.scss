@@ -25,7 +25,8 @@
 
   .navItemWrapper {
     position: fixed;
-    display: none;
+    display: flex;
+    opacity: 0;
     flex-direction: column;
     align-items: center;
     background-color: #ffffff;
@@ -37,6 +38,8 @@
     border-radius: 4px;
     gap: 1.5em;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    transform: translateY(-200%);
+    transition: all .5s;
 
     a {
       color: var(--primary-text);
@@ -45,7 +48,8 @@
   }
 
   .open {
-    display: flex;
+    opacity: 1;
+    transform: translateY(0%);
   }
 
   .hamburgerMenu {
@@ -67,11 +71,13 @@
     }
 
     .navItemWrapper {
-      display: flex;
+      opacity: 1;
+      transform: unset;
       flex-direction: row;
       position: unset;
       padding: unset;
       margin: unset;
+      gap: unset;
       background-color: unset;
       box-shadow: unset;
 

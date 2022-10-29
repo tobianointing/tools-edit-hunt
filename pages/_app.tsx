@@ -1,4 +1,5 @@
 import "@/styles/global.scss"
+import { AnimatePresence } from "framer-motion"
 import type { AppProps } from "next/app"
 import Head from "next/head"
 
@@ -35,9 +36,10 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         <meta charSet="utf-8"></meta>
         <link rel="icon" href="/favicon.ico"></link>
         <title>Tool Edit Hunt</title>
-       
       </Head>
-      <Component {...pageProps} />
+      <AnimatePresence exitBeforeEnter initial={false} onExitComplete={() => window.scrollTo(0, 0)}>
+        <Component {...pageProps} />
+      </AnimatePresence>
     </>
   )
 }
