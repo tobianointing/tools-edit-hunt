@@ -1,4 +1,3 @@
-
 import styles from "@/styles/index.module.scss"
 import PrimaryButton from "src/components/PrimaryButton/index"
 import MemoSkipArrow from "src/components/Icons/SkipArrow"
@@ -12,6 +11,7 @@ import EditToolForm from "src/sections/EditToolForm/index"
 import { TasksType } from "src/types/index"
 import MainLayout from "src/components/MainLayout/index"
 import { motion } from "framer-motion"
+import FinalStageCard from "src/components/FinalStageCard/index"
 
 const taskQueue: TasksType[] = [
   {
@@ -65,9 +65,11 @@ export default function Home() {
   const handleNextTask = () => {
     if (taskCount < tasks.length - 1) {
       setTaskCount((prev) => prev + 1)
+      setFromStep(0)
     }
 
     setModalIsOpen(false)
+    setTaskCount(1)
   }
 
   const variants = {
@@ -81,7 +83,6 @@ export default function Home() {
       <Navbar />
 
       <MainLayout>
-
         <h1 className={`${styles.header}`}>The Seamless Way To Manage Wikis Tools</h1>
         <p className={styles.desc}>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta assumenda error at debitis
@@ -105,7 +106,7 @@ export default function Home() {
             </motion.div>
           )}
 
-          {formStep > 0 && (
+          {formStep > 0 && formStep < 3 && (
             <motion.div
               initial="hidden"
               animate="enter"
@@ -120,6 +121,8 @@ export default function Home() {
               </div>
             </motion.div>
           )}
+
+          {formStep === 3 && <FinalStageCard onClick={handleNextTask} />}
         </div>
       </MainLayout>
       {modalIsOpen && (

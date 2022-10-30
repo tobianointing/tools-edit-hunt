@@ -12,6 +12,7 @@ export default function Dashbaord() {
       <MainLayout>
         <div className={styles.header}>
           <h1>Leaderboard</h1>
+
           <div className={styles.badgeWrapper}>
             <div className={`${styles.badge} ${styles.active}`}>All</div>
             <div className={styles.badge}>Top 5</div>

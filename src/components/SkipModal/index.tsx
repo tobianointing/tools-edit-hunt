@@ -29,7 +29,7 @@ export default function SkipModal(props: Props) {
           </div>
           <div className={styles.fieldWrapper}>
             <input type="checkbox" />
-            <div className="text">Not interested</div>
+            <div className="text">Not sure about the Information I have</div>
           </div>
 
           <div className={styles.btnWrapper}>

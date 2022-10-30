@@ -1,0 +1,36 @@
+.finalStage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--card-background);
+    padding: 2em;
+    border-radius: 4px;
+  
+    .header {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+  
+    .desc {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  @media (min-width:1024px){
+    .finalStage {
+
+        .header {
+          font-size: 2rem;
+          margin-bottom: 1em;
+        }
+      
+        .desc {
+          font-size: 1.2rem;
+          margin-bottom: 1em;
+        }
+      }
+  }
+  
