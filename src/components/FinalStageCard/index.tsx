@@ -8,7 +8,7 @@ type Props = {
 
 export default function FinalStageCard(props: Props) {
   return (
-    <div className={styles.finalStage}>
+    <div data-testid="final-stage-card" className={styles.finalStage}>
       <h2 className={styles.header}>Hurry 🥳</h2>
       <p className={styles.desc}>Congratulations 🎉 you just made one tool better.</p>
       <PrimaryButton title="Edit Next Tool" onClick={props.onClick} />
