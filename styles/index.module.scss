@@ -24,7 +24,8 @@
   width: 100%;
   outline: none;
   border: 2px solid var(--primary-border-color);
-  padding: .8em;
+  padding: 0.65em;
+  font-size: 0.9rem;
   margin-bottom: 2em;
   background: none;
   border-radius: 4px;
@@ -32,12 +33,11 @@
   background-image: url("/search.svg");
   background-repeat: no-repeat;
   background-position: 99% center;
-  background-size: 50px 50px;
+  background-size: 30px 30px;
 
   &:focus {
     border: 2px solid var(--blue-1);
   }
-
 }
 
 @media (min-width: 1024px) {
@@ -58,5 +58,14 @@
   .toolWrapper {
     width: 40%;
     margin: 2em auto;
+  }
+
+  .searchBox {
+    background: none;
+    background-size: 50px 50px;
+
+    &:focus {
+      border: 2px solid var(--blue-1);
+    }
   }
 }
