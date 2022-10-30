@@ -16,6 +16,10 @@
     border-radius: 4px;
     border: 1px solid var(--primary-border-color);
     color: var(--primary-text);
+
+    &:focus {
+      border: 2px solid var(--primary-color);
+    }
   }
 
   small {

@@ -11,6 +11,11 @@
   gap: 1em;
   align-items: center;
   cursor: pointer;
+  transition: all .3s;
+  
+  &:hover {
+    background-color: #85a1f4;
+  }
 }
 
 .secondary {
@@ -20,6 +25,6 @@
 @media (min-width: 1024px) {
   .primaryButton {
     font-size: 1rem;
-    padding: 1em 1.5em;
+    padding: .75em 1em;
   }
 }

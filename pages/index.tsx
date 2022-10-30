@@ -1,19 +1,17 @@
-import Image from "next/image"
 
 import styles from "@/styles/index.module.scss"
 import PrimaryButton from "src/components/PrimaryButton/index"
 import MemoSkipArrow from "src/components/Icons/SkipArrow"
 import Edit from "src/components/Icons/Edit"
 import Navbar from "src/sections/Navbar/index"
-import tiny1 from "public/tiny1.png"
-import tiny2 from "public/tiny2.png"
-import tiny3 from "public/tiny3.png"
 import SkipModal from "src/components/SkipModal/index"
 import { useState } from "react"
 import Footer from "src/sections/Footer/index"
 import ToolInfoCard from "src/components/ToolInfoCard/index"
 import EditToolForm from "src/sections/EditToolForm/index"
 import { TasksType } from "src/types/index"
+import MainLayout from "src/components/MainLayout/index"
+import { motion } from "framer-motion"
 
 const taskQueue: TasksType[] = [
   {
@@ -72,24 +70,17 @@ export default function Home() {
     setModalIsOpen(false)
   }
 
+  const variants = {
+    hidden: { opacity: 0, x: -200, y: 0 },
+    enter: { opacity: 1, x: 0, y: 0 },
+    exit: { opacity: 0, x: 0, y: -100 },
+  }
+
   return (
     <div className={styles.container}>
-     
       <Navbar />
 
-      <main>
-        <div className={styles.tiny1}>
-          {" "}
-          <Image src={tiny1} />
-        </div>
-        <div className={styles.tiny2}>
-          {" "}
-          <Image src={tiny2} />
-        </div>
-        <div className={styles.tiny3}>
-          {" "}
-          <Image src={tiny3} />
-        </div>
+      <MainLayout>
 
         <h1 className={`${styles.header}`}>The Seamless Way To Manage Wikis Tools</h1>
         <p className={styles.desc}>
@@ -99,33 +90,41 @@ export default function Home() {
 
         <div className={styles.toolWrapper}>
           {formStep === 0 && (
-            <>
+            <motion.div
+              initial="hidden"
+              animate="enter"
+              exit="exit"
+              transition={{ type: "linear" }}
+              variants={variants}
+            >
               <ToolInfoCard task={tasks[taskCount]} />
               <div className={styles.btnWrapper}>
                 <PrimaryButton icon={<MemoSkipArrow />} title="Skip Tool" onClick={handleSkip} />
                 <PrimaryButton icon={<Edit />} title="Edit Tool" onClick={handleFormNext} />
               </div>
-            </>
+            </motion.div>
           )}
 
           {formStep > 0 && (
-            <>
+            <motion.div
+              initial="hidden"
+              animate="enter"
+              exit="exit"
+              transition={{ type: "linear" }}
+              variants={variants}
+            >
               <EditToolForm formStep={formStep} handleFormCancel={handleFormCancel} />
               <div className={styles.btnWrapper}>
                 <PrimaryButton title="Go Back" onClick={handleFormPrev} />
                 <PrimaryButton icon={<MemoSkipArrow />} title="Continue" onClick={handleFormNext} />
               </div>
-            </>
+            </motion.div>
           )}
         </div>
-
-        {modalIsOpen && (
-          <SkipModal
-            handleModalClose={() => setModalIsOpen(false)}
-            handleNextTask={handleNextTask}
-          />
-        )}
-      </main>
+      </MainLayout>
+      {modalIsOpen && (
+        <SkipModal handleModalClose={() => setModalIsOpen(false)} handleNextTask={handleNextTask} />
+      )}
       <Footer />
     </div>
   )

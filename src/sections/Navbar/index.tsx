@@ -19,17 +19,25 @@ export default function Navbar(props: Props) {
         <HamburgerMenu />
       </div>
 
-      <div className={styles.logo}>ToolEditHunt</div>
+      <Link href={"/"} scroll={false}>
+        <div className={styles.logo}>ToolEditHunt</div>
+      </Link>
 
       <ul className={`${styles.navItemWrapper} ${isOpen && styles.open}`}>
         <li>
-          <Link href="/">Home</Link>
+          <Link scroll={false} href="/">
+            Home
+          </Link>
         </li>
         <li>
-          <Link href="/dashboard">Dashbaord</Link>
+          <Link scroll={false} href="/dashboard">
+            Dashbaord
+          </Link>
         </li>
         <li>
-          <Link href="leaderboard">Leaderboard</Link>
+          <Link scroll={false} href="leaderboard">
+            Leaderboard
+          </Link>
         </li>
       </ul>
 

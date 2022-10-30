@@ -7,12 +7,13 @@ import PrimaryBarChart from "src/components/PrimaryBarChart/index"
 import IncompleteIcon from "src/components/Icons/IncompleteIcon"
 import EditedIcon from "src/components/Icons/EditedIcon"
 import {topMissingTools, topTechnologiesUsed} from "src/data"
+import MainLayout from "src/components/MainLayout/index"
 
 export default function Dashbaord() {
   return (
     <div className={styles.container}>
       <Navbar />
-      <main>
+      <MainLayout>
         <h1 className={styles.header}>Dashboard</h1>
         <p className={styles.smallHeader}>Welcome Jane</p>
 
@@ -31,7 +32,7 @@ export default function Dashbaord() {
           <PrimaryBarChart title={"Most missing tools"} data={topMissingTools} />
           <PrimaryBarChart title={"Most used technology"} data={topTechnologiesUsed} />
         </div>
-      </main>
+      </MainLayout>
     </div>
   )
 }

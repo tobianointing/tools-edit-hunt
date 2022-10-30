@@ -1,16 +1,15 @@
-import Head from "next/head"
-
 import styles from "@/styles/leaderboard.module.scss"
 import Navbar from "src/sections/Navbar/index"
 import TableRow from "src/components/TableRow/index"
 import LeaderboardTable from "src/sections/LeaderBoardTable/index"
 import { leaderboard } from "src/data/index"
+import MainLayout from "src/components/MainLayout/index"
 
 export default function Dashbaord() {
   return (
     <div className={styles.container}>
       <Navbar />
-      <main>
+      <MainLayout>
         <div className={styles.header}>
           <h1>Leaderboard</h1>
           <div className={styles.badgeWrapper}>
@@ -27,7 +26,7 @@ export default function Dashbaord() {
             ))}
           </LeaderboardTable>
         </div>
-      </main>
+      </MainLayout>
     </div>
   )
 }

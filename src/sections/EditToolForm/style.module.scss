@@ -34,13 +34,16 @@
   }
 }
 
-@media (min-width: 1024px){
-    .header {
-        flex-direction: row;
-        align-items: flex-end;
-    }
+@media (min-width: 1024px) {
+  .title {
+    font-size: 2rem;
+  }
+  .header {
+    flex-direction: row;
+    align-items: flex-end;
+  }
 
-    .btns {
-        justify-content: flex-end;
-      }
+  .btns {
+    justify-content: flex-end;
+  }
 }
