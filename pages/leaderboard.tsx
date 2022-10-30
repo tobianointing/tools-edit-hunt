@@ -4,6 +4,7 @@ import TableRow from "src/components/TableRow/index"
 import LeaderboardTable from "src/sections/LeaderBoardTable/index"
 import { leaderboard } from "src/data/index"
 import MainLayout from "src/components/MainLayout/index"
+import Footer from "src/sections/Footer/index"
 
 export default function Dashbaord() {
   return (
@@ -28,6 +29,7 @@ export default function Dashbaord() {
           </LeaderboardTable>
         </div>
       </MainLayout>
+      <Footer />
     </div>
   )
 }

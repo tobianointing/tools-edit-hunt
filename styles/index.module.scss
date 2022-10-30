@@ -20,6 +20,25 @@
   justify-content: space-between;
 }
 
+.searchBox {
+  width: 100%;
+  outline: none;
+  border: 2px solid var(--primary-border-color);
+  padding: .8em;
+  margin-bottom: 2em;
+  background: none;
+  border-radius: 4px;
+  position: relative;
+  background-image: url("/search.svg");
+  background-repeat: no-repeat;
+  background-position: 99% center;
+  background-size: 50px 50px;
+
+  &:focus {
+    border: 2px solid var(--blue-1);
+  }
+
+}
 
 @media (min-width: 1024px) {
   .header {
@@ -39,21 +58,5 @@
   .toolWrapper {
     width: 40%;
     margin: 2em auto;
-  }
-
-  .tiny1 {
-    position: absolute;
-    top: 50%;
-  }
-
-  .tiny2 {
-    position: absolute;
-    right: 10%;
-  }
-
-  .tiny3 {
-    position: absolute;
-    right: 10%;
-    top: 85%;
   }
 }

@@ -90,6 +90,8 @@ export default function Home() {
         </p>
 
         <div className={styles.toolWrapper}>
+          <input type="text" className={styles.searchBox} placeholder="Search Tool"/>
+
           {formStep === 0 && (
             <motion.div
               initial="hidden"

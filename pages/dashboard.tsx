@@ -1,4 +1,3 @@
-
 import styles from "@/styles/dashboard.module.scss"
 import Navbar from "src/sections/Navbar/index"
 import DashboardCard from "src/components/DashboardCard/index"
@@ -6,8 +5,9 @@ import ToolBox from "src/components/Icons/ToolBox"
 import PrimaryBarChart from "src/components/PrimaryBarChart/index"
 import IncompleteIcon from "src/components/Icons/IncompleteIcon"
 import EditedIcon from "src/components/Icons/EditedIcon"
-import {topMissingTools, topTechnologiesUsed} from "src/data"
+import { topMissingTools, topTechnologiesUsed } from "src/data"
 import MainLayout from "src/components/MainLayout/index"
+import Footer from "src/sections/Footer/index"
 
 export default function Dashbaord() {
   return (
@@ -33,6 +33,7 @@ export default function Dashbaord() {
           <PrimaryBarChart title={"Most used technology"} data={topTechnologiesUsed} />
         </div>
       </MainLayout>
+      <Footer />
     </div>
   )
 }
